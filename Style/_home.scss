@@ -1,0 +1,54 @@
+@import 'variables';
+
+@mixin header {
+    header {
+        background-image: url("https://github.com/danielJ305/Event-Search-App/blob/master/Media/img-1.jpg");
+        background-repeat: no-repeat;
+        padding:3em;
+        
+        img {
+            width: 200px;
+            height:auto;
+        }
+
+        .search-bar-wrapper {
+            align-self: center;
+
+            .search-bar {
+                display:flex;
+                width: 100%;
+                max-width:600px;
+                background-color: #ffffff;
+                border-radius:26px;
+                padding:4px 6px 4px 14px;
+
+                input {
+                    border:none;
+                    padding:4px 0;
+                    outline:none;
+                    width:100%;
+                    margin:0 5px;
+                }
+                #event_search {
+                    border-right:1.2px solid rgba(54, 54, 54, 0.432);
+                }
+
+                button {
+                    border-radius:18px;
+                    padding:8px;
+                    border:none;
+                    background-color: $second-main;
+                    height:32px;
+                    outline:none;
+
+                    svg {
+                        width:16px;
+                        height:16px;
+                        margin-bottom:15px;
+                    }
+                }
+            }
+        }
+
+    }
+}
