@@ -1,5 +1,16 @@
+header, .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 100vw;
+}
+
 header {
-  background-image: url("https://github.com/danielJ305/Event-Search-App/blob/master/Media/img-1.jpg");
+  background-image: url("../Media/img-1.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 3em;
 }
@@ -51,5 +62,9 @@ header .search-bar-wrapper .search-bar button svg {
   width: 16px;
   height: 16px;
   margin-bottom: 15px;
+}
+
+.hero {
+  background-color: lightgoldenrodyellow;
 }
 /*# sourceMappingURL=main.css.map */

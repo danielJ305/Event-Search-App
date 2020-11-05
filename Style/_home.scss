@@ -1,8 +1,17 @@
 @import 'variables';
 
+%container {
+    display: flex;
+    justify-content:center;
+    min-width:100vw;    
+}
+
 @mixin header {
     header {
-        background-image: url("https://github.com/danielJ305/Event-Search-App/blob/master/Media/img-1.jpg");
+        @extend %container;
+
+        background-image: url('../Media/img-1.jpg');
+        background-size: cover;
         background-repeat: no-repeat;
         padding:3em;
         
@@ -50,5 +59,12 @@
             }
         }
 
+    }
+}
+
+@mixin hero {
+    .hero {
+        @extend %container;
+        background-color: lightgoldenrodyellow;
     }
 }
