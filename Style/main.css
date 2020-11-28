@@ -1,11 +1,20 @@
-header, .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
+footer, .hero, header {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   min-width: 100vw;
+}
+
+footer .footer-wrapper, .popular .popular-wrapper, .hero .hero-wrapper, header .nav-wrapper {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.hero .hero-wrapper .side-featured-events img, .hero .hero-wrapper .featured-event div:first-child img {
+  border-radius: 5px;
+}
+
+.hero .hero-wrapper .side-featured-events label, .hero .hero-wrapper .featured-event div:last-child p, .hero .hero-wrapper .featured-event div:last-child h3 {
+  margin: 0;
 }
 
 header {
@@ -14,21 +23,14 @@ header {
   background-repeat: no-repeat;
   padding: 3em;
 }
-
 header img {
   width: 200px;
   height: auto;
 }
-
 header .search-bar-wrapper {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 header .search-bar-wrapper .search-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   max-width: 600px;
@@ -36,7 +38,6 @@ header .search-bar-wrapper .search-bar {
   border-radius: 26px;
   padding: 4px 6px 4px 14px;
 }
-
 header .search-bar-wrapper .search-bar input {
   border: none;
   padding: 4px 0;
@@ -44,11 +45,9 @@ header .search-bar-wrapper .search-bar input {
   width: 100%;
   margin: 0 5px;
 }
-
 header .search-bar-wrapper .search-bar #event_search {
   border-right: 1.2px solid rgba(54, 54, 54, 0.432);
 }
-
 header .search-bar-wrapper .search-bar button {
   border-radius: 18px;
   padding: 8px;
@@ -57,14 +56,142 @@ header .search-bar-wrapper .search-bar button {
   height: 32px;
   outline: none;
 }
-
 header .search-bar-wrapper .search-bar button svg {
   width: 16px;
   height: 16px;
   margin-bottom: 15px;
 }
+header .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
 .hero {
-  background-color: lightgoldenrodyellow;
+  background-color: white;
 }
+.hero .hero-wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.hero .hero-wrapper .featured-event {
+  flex-grow: 2;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero-wrapper .featured-event div:first-child img {
+  max-width: 826px;
+  max-height: 464px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .hero-wrapper .featured-event div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+.hero .hero-wrapper .featured-event div:last-child h3 {
+  font-size: 24px;
+}
+.hero .hero-wrapper .featured-event div:last-child p {
+  padding-top: 3px;
+  font-size: 16px;
+}
+.hero .hero-wrapper .side-featured-events {
+  flex-grow: 1;
+  display: flex;
+}
+.hero .hero-wrapper .side-featured-events div:first-child {
+  padding-right: 10px;
+}
+.hero .hero-wrapper .side-featured-events img {
+  max-width: 196px;
+  max-height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero .hero-wrapper .side-featured-events label {
+  font-size: 14px;
+}
+.hero .hero-wrapper .side-featured-events label.ftr-title {
+  font-weight: 500;
+}
+
+.popular {
+  width: 100vw;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.popular .popular-wrapper .popular-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.popular .popular-wrapper .popular-events {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.popular .popular-wrapper .popular-events .popular-event-card {
+  position: relative;
+  margin-bottom: 20px;
+}
+.popular .popular-wrapper .popular-events .popular-event-card img {
+  max-width: 294px;
+  max-height: 166px;
+  border-radius: 5px;
+}
+.popular .popular-wrapper .popular-events .popular-event-card div {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: rgba(54, 54, 54, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.popular .popular-wrapper .popular-events .popular-event-card div label:first-child {
+  font-size: 16px;
+  font-weight: 500;
+}
+.popular .popular-wrapper .popular-events .popular-event-card div label:last-child {
+  font-size: 14px;
+}
+.popular .popular-wrapper .popular-events .popular-event-card div label {
+  margin: 0;
+}
+
+footer {
+  background-color: #1F262D;
+}
+footer .footer-wrapper {
+  padding: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer .footer-wrapper .footer-one {
+  display: flex;
+  align-items: flex-end;
+}
+footer .footer-wrapper .footer-one img {
+  width: 150px;
+  height: auto;
+}
+footer .footer-wrapper .footer-one p {
+  color: white;
+  padding-left: 30px;
+  position: relative;
+  top: 16px;
+}
+footer .footer-wrapper .footer-two a {
+  color: white;
+  padding-left: 30px;
+}
+
 /*# sourceMappingURL=main.css.map */
